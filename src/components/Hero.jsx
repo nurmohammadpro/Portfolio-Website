@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
-import { useTheme } from "../contexts/ThemeContext";
-import Photo from "../assets/PP.jpg";
+import { Link } from 'react-router-dom';
+import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
+import Photo from '../assets/PP.jpg';
 
 const Hero = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section className="pt-32 pb-20">
+      <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
@@ -84,16 +84,16 @@ const Hero = () => {
           </div>
 
           {/* Floating elements - Enhanced visibility with custom classes */}
-          <div
+          {/* <div
             className={`absolute -top-4 -right-4 w-24 h-24 rounded-2xl ${
-              isDarkMode ? "bg-primary-color/30" : "bg-primary-color/10"
+              isDarkMode ? 'bg-primary-color/30' : 'bg-primary-color/10'
             } border border-primary-color/40 backdrop-blur-sm`}
           ></div>
           <div
             className={`absolute -bottom-6 -left-6 w-32 h-32 rounded-3xl ${
-              isDarkMode ? "bg-primary-color/30" : "bg-primary-color/10"
+              isDarkMode ? 'bg-primary-color/30' : 'bg-primary-color/10'
             } border border-primary-color/40 backdrop-blur-sm`}
-          ></div>
+          ></div> */}
         </div>
       </div>
     </section>

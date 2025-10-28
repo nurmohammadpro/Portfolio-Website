@@ -1,11 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./contexts/ThemeContext";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
-import Homepage from "./pages/Homepage";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
+import Homepage from './pages/Homepage';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/skills" element={<Skills />} />;
             <Route path="/contact" element={<Contact />} />;
           </Routes>
+          <Footer />
         </div>
       </Router>
     </ThemeProvider>
