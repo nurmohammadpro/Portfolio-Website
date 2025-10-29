@@ -84,7 +84,7 @@ const Projects = () => {
               <div
                 key={project.id}
                 className="bg-card rounded-xl border border-default overflow-hidden
-                           hover:border-primary-color hover:shadow-lg transition-all duration-500 group"
+                           hover:border-primary-color hover:shadow-lg transition-shadow duration-500 group"
               >
                 {/* FIX 2: Corrected Image Structure & Dimensions */}
                 <div className="w-full h-60 overflow-hidden border-b border-default ">
@@ -124,8 +124,8 @@ const Projects = () => {
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-primary-color text-primary
-                                 px-6 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors"
+                      className="inline-flex items-center gap-2 bg-primary-color text-primary border-default
+                                 px-6 py-3 rounded-sm font-medium hover:bg-primary-hover transition-colors"
                     >
                       <ExternalLink className="w-5 h-5" />
                       Live Demo
@@ -135,7 +135,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 border-2 border-primary-color text-primary-color
-                                 px-6 py-3 rounded-lg font-medium hover:bg-primary-color hover:text-white transition-colors"
+                                 px-6 py-3 rounded-sm font-medium hover:bg-primary-color hover:text-secondary-color transition-colors"
                     >
                       <Github className="w-5 h-5" />
                       GitHub Repo
@@ -159,7 +159,7 @@ const Projects = () => {
           </p>
           <Link
             to="/#contact"
-            className="inline-block bg-primary-color text-primary px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-hover border-default hover:border-primary-color transition-colors"
+            className="inline-block border-primary-color text-primary px-8 py-3 rounded-sm text-lg font-medium hover:bg-primary-hover border-default hover:border-primary-color transition-colors"
           >
             Get In Touch
           </Link>

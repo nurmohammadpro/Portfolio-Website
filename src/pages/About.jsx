@@ -1,7 +1,22 @@
 import { Link } from 'react-router-dom';
-import { Briefcase, Heart, Lightbulb, Code, BookOpen } from 'lucide-react';
+import {
+  Briefcase,
+  Heart,
+  Lightbulb,
+  Code,
+  BookOpen,
+  Blocks,
+} from 'lucide-react';
 import Card from '../components/Card';
 import Highlights from '../components/Highlights';
+import CSS from '../assets/tech-icons/css.png';
+import HTML from '../assets/tech-icons/html.png';
+import JavaScript from '../assets/tech-icons/javascript.png';
+import ReactLogo from '../assets/tech-icons/reactjs.png';
+import TailwindCSS from '../assets/tech-icons/tailwindcss.png';
+import Firebase from '../assets/tech-icons/firebase.png';
+import Nodejs from '../assets/tech-icons/nodejs.png';
+import Nextjs from '../assets/tech-icons/nextjs.png';
 
 const coreValues = [
   {
@@ -30,7 +45,7 @@ const highlightsData = [
     company: 'Tech Solutions Co.',
     year: '2022 - Present',
     description: [
-      'Developed and maintained core features using **Vanilla JavaScript** and **React JS**.',
+      'Developed and maintained core features using Vanilla JavaScript and React JS.',
       'Integrated **Firebase** for user authentication and real-time database functions.',
       'Contributed to component library creation using Storybook (optional detail).',
     ],
@@ -40,11 +55,22 @@ const highlightsData = [
     company: 'Startup Innovators',
     year: '2021 - 2022',
     description: [
-      'Assisted in the development of user-friendly web applications using **React** and **Node.js**.',
+      'Assisted in the development of user-friendly web applications using React and Node.js.',
       'Collaborated with designers to implement responsive UI components.',
       'Participated in code reviews and contributed to team knowledge sharing.',
     ],
   },
+];
+
+const techIcons = [
+  { src: HTML, alt: 'HTML', title: 'HTML5' },
+  { src: CSS, alt: 'CSS', title: 'CSS3' },
+  { src: JavaScript, alt: 'JavaScript', title: 'JavaScript' },
+  { src: ReactLogo, alt: 'React', title: 'React.js' },
+  { src: Nextjs, alt: 'Next.js', title: 'Next.js' },
+  { src: TailwindCSS, alt: 'Tailwind CSS', title: 'Tailwind CSS' },
+  { src: Firebase, alt: 'Firebase', title: 'Firebase' },
+  { src: Nodejs, alt: 'Node.js', title: 'Node.js' },
 ];
 
 const About = () => {
@@ -55,7 +81,7 @@ const About = () => {
       {/* End Navigation */}
 
       {/* Hero Header */}
-      <section className="pt-32 pb-16 px-6 bg-subtle rounded-sm">
+      <section className="py-20 px-6 bg-subtle rounded-sm">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-primary-color text-xl font-semibold mb-2">
             My Journey & Philosophy
@@ -86,10 +112,10 @@ const About = () => {
             </p>
             <p>
               My expertise spans the entire modern frontend stack, from styling
-              with **TailwindCSS** and semantic **HTML/CSS** to state management
-              in **Next.js** applications. I have hands-on experience
-              integrating with backend services, utilizing **Firebase** for
-              rapid prototyping, and building robust, scalable interfaces.
+              with TailwindCSS and semantic HTML/CSS to state management in
+              Next.js applications. I have hands-on experience integrating with
+              backend services, utilizing Firebase for rapid prototyping, and
+              building robust, scalable interfaces.
             </p>
             <p>
               Beyond the code, I am a firm believer in continuous learning. The
@@ -101,7 +127,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* --- */}
+      {/* Tech Stack */}
 
       {/* Experience Timeline / Key Roles */}
       <section className="py-20 px-6 bg-card border-t border-b border-default rounded-sm">
@@ -123,6 +149,31 @@ const About = () => {
             ))}
           </div>
         </div>
+        <section className="py-20 px-6 bg-card">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-primary mb-12 text-center flex justify-center items-center gap-3">
+              <Blocks className="w-7 h-7 text-primary-color" />
+              My Tech Stack
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {techIcons.map((icon, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center bg-cover border-default p-6 rounded-sm hover:shadow-sm transition-shadow duration-300"
+                >
+                  <img
+                    src={icon.src}
+                    alt={icon.alt}
+                    className="w-16 h-16 mb-2 bg-cover"
+                  />
+                  <span className="text-sm font-semibold text-center">
+                    {icon.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </section>
 
       {/* --- */}
