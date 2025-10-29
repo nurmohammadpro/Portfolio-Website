@@ -49,7 +49,7 @@ const highlightsData = [
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen bg-surface transition-colors duration-300 text-primary">
+    <div className=" bg-surface transition-colors duration-300 text-primary">
       {/* Navigation (Added from Homepage structure) */}
 
       {/* End Navigation */}

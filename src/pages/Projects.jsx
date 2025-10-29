@@ -63,7 +63,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-surface text-primary transition-colors duration-600">
+    <div className=" bg-surface text-primary transition-colors duration-600">
       {/* --- Header Section --- */}
       <section className="py-16 px-6 bg-subtle rounded-sm">
         <div className="container mx-auto max-w-7xl text-center">
