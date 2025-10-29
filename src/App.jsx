@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScroolToTop from './components/ScroolToTop';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />;
           </Routes>
           <Footer />
+          <ScroolToTop />
         </div>
       </Router>
     </ThemeProvider>

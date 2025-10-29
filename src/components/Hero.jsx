@@ -1,11 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
 import Photo from '../assets/PP.jpg';
 
 const Hero = () => {
-  const { isDarkMode } = useTheme();
-
   return (
     <section className="pt-32 pb-20">
       <div className="mx-auto max-w-7xl">
@@ -74,9 +71,9 @@ const Hero = () => {
 
           {/* Right Content - Profile Image/Graphic (Styling preserved) */}
           <div className="relative hidden md:block">
-            <div className="w-80 h-80 mx-auto bg-primary-color/50 rounded-full flex items-center justify-center p-2">
-              <div className="w-full h-full bg-surface rounded-full flex items-center justify-center p-4">
-                <div className="w-full h-full bg-subtle rounded-full flex items-center justify-center">
+            <div className="w-80 h-80 mx-auto bg-primary-color/50 rounded-full flex flex-1 items-center justify-end p-2">
+              <div className="w-full h-full bg-surface rounded-full flex items-center justify-items-end p-4">
+                <div className="w-full h-full bg-subtle rounded-full flex items-center justify-end">
                   <img src={Photo} alt="photo" className="rounded-full" />
                 </div>
               </div>
