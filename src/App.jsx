@@ -13,7 +13,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <Router>
-        <div className="font-display bg-surface p-2">
+        <div className="font-body bg-surface p-2">
           <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />;

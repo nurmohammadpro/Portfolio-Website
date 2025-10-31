@@ -1,17 +1,18 @@
-import NavButton from "./NavButton";
-import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
-import { Braces } from "lucide-react";
+import NavButton from './NavButton';
+import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
+import { Braces } from 'lucide-react';
 
 const generateId = () => {
   return crypto.randomUUID();
 };
 
 const navItems = [
-  { id: generateId(), title: "About", path: "/about" },
-  { id: generateId(), title: "Projects", path: "/projects" },
-  { id: generateId(), title: "Skills", path: "/skills" },
-  { id: generateId(), title: "Contact", path: "/contact" },
+  { id: generateId(), title: 'Home', path: '/' },
+  { id: generateId(), title: 'About', path: '/about' },
+  { id: generateId(), title: 'Projects', path: '/projects' },
+  { id: generateId(), title: 'Skills', path: '/skills' },
+  { id: generateId(), title: 'Contact', path: '/contact' },
 ];
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
       <nav className="h-16 flex items-center justify-between">
         <div className="">
           <Link to="/" className="bg-surface">
-            <Braces strokeWidth={4} className="text-primary" />
+            <Braces strokeWidth={2} className="text-primary" />
           </Link>
         </div>
         <div className="flex items-center justify-between">
