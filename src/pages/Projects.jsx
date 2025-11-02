@@ -4,10 +4,13 @@ import DashboardImage from '../assets/InteractiveDashboard.jpg';
 import LearningManagementSystem from '../assets/LearningManagementSystem.jpg';
 import ModernEcommercePlatform from '../assets/ModernEcommercePlatform.jpg';
 import RealtimeInventorySystem from '../assets/RealtimeInventorySystem.jpg';
+import { useId } from 'react';
+
+const id = useId();
 
 const projectsData = [
   {
-    id: 1,
+    id: id,
     title: 'Interactive Dashboard',
     description:
       'A dynamic dashboard application for visualizing data, managing user tasks, and monitoring key performance indicators (KPIs). Features real-time charts and custom widgets.',
@@ -18,7 +21,7 @@ const projectsData = [
     githubLink: '#',
   },
   {
-    id: 2,
+    id: id,
     title: 'Modern E-commerce Platform 🛍️',
     description:
       'A full-featured e-commerce website with product listings, shopping cart functionality, secure checkout, and user authentication. Designed for a smooth shopping experience.',
@@ -34,7 +37,7 @@ const projectsData = [
     githubLink: '#',
   },
   {
-    id: 3,
+    id: id,
     title: 'Learning Management System (LMS) 📚',
     description:
       'An intuitive platform for online courses, user progress tracking, and content management. Supports multiple user roles (student, instructor) and rich media content.',
@@ -50,7 +53,7 @@ const projectsData = [
     githubLink: '#',
   },
   {
-    id: 4,
+    id: id,
     title: 'Real-time Inventory System 📦',
     description:
       'A robust web application for managing product inventory, tracking stock levels, and generating reports. Includes features for item search, adding, updating, and deleting.',

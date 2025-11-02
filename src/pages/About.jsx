@@ -1,22 +1,7 @@
 import { Link } from 'react-router-dom';
-import {
-  Briefcase,
-  Heart,
-  Lightbulb,
-  Code,
-  BookOpen,
-  Blocks,
-} from 'lucide-react';
+import { Briefcase, Heart, Lightbulb, Code, BookOpen } from 'lucide-react';
 import Card from '../components/Card';
 import Highlights from '../components/Highlights';
-import CSS from '../assets/tech-icons/css.png';
-import HTML from '../assets/tech-icons/html.png';
-import JavaScript from '../assets/tech-icons/javascript.png';
-import ReactLogo from '../assets/tech-icons/reactjs.png';
-import TailwindCSS from '../assets/tech-icons/tailwindcss.png';
-import Firebase from '../assets/tech-icons/firebase.png';
-import Nodejs from '../assets/tech-icons/nodejs.png';
-import Nextjs from '../assets/tech-icons/nextjs.png';
 
 const coreValues = [
   {
@@ -60,17 +45,6 @@ const highlightsData = [
       'Participated in code reviews and contributed to team knowledge sharing.',
     ],
   },
-];
-
-const techIcons = [
-  { src: HTML, alt: 'HTML', title: 'HTML5' },
-  { src: CSS, alt: 'CSS', title: 'CSS3' },
-  { src: JavaScript, alt: 'JavaScript', title: 'JavaScript' },
-  { src: ReactLogo, alt: 'React', title: 'React.js' },
-  { src: Nextjs, alt: 'Next.js', title: 'Next.js' },
-  { src: TailwindCSS, alt: 'Tailwind CSS', title: 'Tailwind CSS' },
-  { src: Firebase, alt: 'Firebase', title: 'Firebase' },
-  { src: Nodejs, alt: 'Node.js', title: 'Node.js' },
 ];
 
 const About = () => {
@@ -174,57 +148,6 @@ const About = () => {
             </div>
           </div>
         </section> */}
-        <section className="py-20 px-6 bg-card">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-primary mb-12 text-center flex justify-center items-center gap-3">
-              <Blocks className="w-7 h-7 text-primary-color" />
-              My Tech Stack
-            </h2>
-
-            {/* Enhanced grid with better spacing and hover effects */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-              {techIcons.map((icon, index) => (
-                <div
-                  key={index}
-                  className="group flex flex-col items-center bg-subtle border-default p-4 md:p-6 rounded-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
-                >
-                  {/* Icon container with subtle background */}
-                  <div className="w-14 h-14 md:w-16 md:h-16 mb-3 md:mb-4 flex items-center justify-center rounded-sm bg-card/50 group-hover:bg-card/70 transition-colors duration-300 p-2">
-                    <img
-                      src={icon.src}
-                      alt={icon.alt}
-                      className="w-full h-full object-contain filter group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-
-                  {/* Title with better typography */}
-                  <span className="text-xs md:text-sm font-semibold text-center text-primary group-hover:text-primary-color transition-colors duration-300">
-                    {icon.title}
-                  </span>
-
-                  {/* Optional: Add a subtle border effect on hover */}
-                  <div className="w-0 group-hover:w-8 h-0.5 bg-primary-color mt-2 transition-all duration-300"></div>
-                </div>
-              ))}
-            </div>
-
-            {/* Optional: Skill level indicators or categories */}
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-subtle border-default rounded-sm">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span className="text-sm text-primary">Proficient</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-subtle border-default rounded-sm">
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <span className="text-sm text-primary">Intermediate</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-subtle border-default rounded-sm">
-                <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                <span className="text-sm text-primary">Learning</span>
-              </div>
-            </div>
-          </div>
-        </section>
       </section>
 
       {/* --- */}
