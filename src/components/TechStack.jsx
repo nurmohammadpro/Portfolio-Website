@@ -106,7 +106,7 @@ const TechStack = () => {
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         <button
           onClick={() => handleSkillSelect('all')}
-          className={`flex items-center gap-2 px-4 py-2 border-default rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
+          className={`flex items-center gap-2 px-4 py-2 border-default cursor-pointer rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
             'all'
           )}`}
         >
@@ -117,7 +117,7 @@ const TechStack = () => {
         </button>
         <button
           onClick={() => handleSkillSelect('proficient')}
-          className={`flex items-center gap-2 px-4 py-2 border-default rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
+          className={`flex items-center gap-2 px-4 py-2 border-default cursor-pointer rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
             'proficient'
           )}`}
         >
@@ -128,7 +128,7 @@ const TechStack = () => {
         </button>
         <button
           onClick={() => handleSkillSelect('intermediate')}
-          className={`flex items-center gap-2 px-4 py-2 border-default rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
+          className={`flex items-center gap-2 px-4 py-2 border-default cursor-pointer rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
             'intermediate'
           )}`}
         >
@@ -139,7 +139,7 @@ const TechStack = () => {
         </button>
         <button
           onClick={() => handleSkillSelect('learning')}
-          className={`flex items-center gap-2 px-4 py-2 border-default rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
+          className={`flex items-center gap-2 px-4 py-2 border-default cursor-pointer rounded-sm transition-all duration-300 hover:bg-card/70 ${getFilterBackground(
             'learning'
           )}`}
         >
