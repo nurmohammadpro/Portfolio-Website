@@ -1,35 +1,34 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react"
 
 export const useIntersectionObserver = (options = {}) => {
-  // Add options as parameter with default value
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef(null);
+  const [isIntersecting, setIsIntersecting] = useState(false)
+  const ref = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
+        setIsIntersecting(entry.isIntersecting)
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-viewport');
+          entry.target.classList.add("in-viewport")
         }
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -30px 0px',
-        ...options, // Now options is defined
-      }
-    );
+        rootMargin: "0px 0px -30px 0px",
+        ...options,
+      },
+    )
 
     if (ref.current) {
-      observer.observe(ref.current);
+      observer.observe(ref.current)
     }
 
     return () => {
       if (ref.current) {
-        observer.unobserve(ref.current);
+        observer.unobserve(ref.current)
       }
-    };
-  }, [options]); // options is now a dependency
+    }
+  }, [options])
 
-  return [ref, isIntersecting];
-};
+  return [ref, isIntersecting]
+}

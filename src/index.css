@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --font-body: 'Raleway', 'sans-serif';
+  --font-body: "Raleway", "sans-serif";
 }
 
-/* Enhanced fade-up animation with viewport detection */
+/* Enhanced fade-up animation with smoother, more Apple-like appearance */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -21,7 +21,7 @@
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up.animate {
@@ -29,13 +29,36 @@
   transform: translateY(0);
 }
 
-/* Optional: Different animation styles */
+/* Added smooth page transition animations */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Different animation styles */
 .fade-up-slow {
-  transition: all 1.2s ease-out;
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up-fast {
-  transition: all 0.5s ease-out;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* When section comes into viewport */
@@ -74,21 +97,9 @@ section.in-viewport .fade-up {
   transition-delay: 0.8s;
 }
 
-/* Original animation as fallback */
-@keyframes fadeup {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Fallback for browsers that don't support Intersection Observer */
 .fade-up:not(.no-js) {
-  animation: fadeup 1s ease-out forwards;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* ---------- 🌞 Light Mode ---------- */
@@ -101,7 +112,7 @@ section.in-viewport .fade-up {
 
   /* Text */
   --text-primary: oklch(20% 0 0);
-  --text-secondary: oklch(55% 0 0);
+  --text-secondary: #717171;
   --text-placeholder: oklch(75% 0 0);
 
   /* Accent & Borders */
@@ -115,11 +126,11 @@ section.in-viewport .fade-up {
   --bg-surface: oklch(15% 0.01 0);
   --bg-card: oklch(20% 0.01 0);
   --bg-subtle: oklch(25% 0.01 0);
-  --bg-input: oklch(30% 0.01 0);
+  --bg-input: #322c2d;
 
   --text-primary: oklch(95% 0.01 0);
   --text-secondary: oklch(85% 0.01 0);
-  --text-placeholder: oklch(75% 0.01 0);
+  --text-placeholder: #b4abad;
 
   --color-primary: oklch(85% 0.01 260);
   --color-primary-hover: oklch(75% 0.01 260);
@@ -182,8 +193,7 @@ section.in-viewport .fade-up {
   background-color: var(--color-primary-hover);
 }
 
-/* ---------- ✨ Optional: Smooth Theme Transition ---------- */
+/* ---------- ✨ Smooth Theme Transition ---------- */
 * {
-  transition: color 0.25s ease, background-color 0.25s ease,
-    border-color 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }

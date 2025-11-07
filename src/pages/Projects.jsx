@@ -170,7 +170,7 @@ const Projects = () => {
             to="/#contact"
             className="inline-block border-primary-color text-primary px-8 py-3 rounded-sm text-lg font-medium hover:bg-primary-hover border-default hover:border-primary-color transition-colors"
           >
-            Get In Touch
+            Get Started
           </Link>
         </div>
       </section>

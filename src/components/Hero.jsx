@@ -1,47 +1,37 @@
 // components/Hero.jsx
-import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
-import Photo from '../assets/PP.jpg';
-import { useIntersectionObserver } from '../contexts/useIntersectionObserver';
-import AnimatedElement from './AnimatedElement';
+import { Link } from "react-router-dom"
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react"
+import Photo from "../assets/PP.jpg"
+import { useIntersectionObserver } from "../contexts/useIntersectionObserver"
+import AnimatedElement from "./AnimatedElement"
+import FadeInText from "./FadeInText"
 
 const Hero = () => {
-  const [sectionRef] = useIntersectionObserver();
+  const [sectionRef] = useIntersectionObserver()
 
   return (
-    <section
-      ref={sectionRef}
-      className="pt-32 pb-20 opacity-0 transition-opacity duration-1000"
-    >
+    <section ref={sectionRef} className="pt-32 pb-20 opacity-0 transition-opacity duration-1000">
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
               <AnimatedElement animation="fade-up" delay="100">
-                <p className="text-primary-color text-lg font-medium">
-                  Hello, I'm a
-                </p>
+                <p className="text-primary-color text-lg font-medium">Hello, I'm a</p>
               </AnimatedElement>
 
-              <AnimatedElement animation="fade-up" delay="200">
-                <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
-                  Frontend <br />
-                  <span className="text-primary-color">Web Developer</span>
-                </h1>
-              </AnimatedElement>
+              <FadeInText delay={0.2} duration={0.8} stagger>
+                <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">Frontend Web Developer</h1>
+              </FadeInText>
 
               <AnimatedElement animation="fade-up" delay="300">
-                <h2 className="text-2xl md:text-3xl text-secondary font-medium">
-                  React | Next.js | TailwindCSS
-                </h2>
+                <h2 className="text-2xl md:text-3xl text-secondary font-medium">React | Next.js | TailwindCSS</h2>
               </AnimatedElement>
 
               <AnimatedElement animation="fade-up" delay="400">
                 <p className="text-lg text-secondary max-w-lg leading-relaxed">
-                  I build fast, responsive, and beautiful user interfaces.
-                  Passionate about modern JavaScript frameworks and clean,
-                  component-based architecture.
+                  I build fast, responsive, and beautiful user interfaces. Passionate about modern JavaScript frameworks
+                  and clean, component-based architecture.
                 </p>
               </AnimatedElement>
             </div>
@@ -94,15 +84,11 @@ const Hero = () => {
           </div>
 
           {/* Right Content */}
-          <AnimatedElement
-            animation="fade-up"
-            delay="700"
-            className="relative hidden md:block"
-          >
+          <AnimatedElement animation="fade-up" delay="700" className="relative hidden md:block">
             <div className="w-80 h-80 mx-auto bg-primary-color/50 rounded-2xl flex flex-1 items-center justify-end p-2">
               <div className="w-full h-full bg-surface rounded-3xl flex items-center justify-items-end p-4">
                 <div className="w-full h-full bg-subtle rounded-3xl flex items-center justify-end">
-                  <img src={Photo} alt="photo" className="rounded-3xl" />
+                  <img src={Photo || "/placeholder.svg"} alt="photo" className="rounded-3xl" />
                 </div>
               </div>
             </div>
@@ -110,7 +96,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

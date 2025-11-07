@@ -1,23 +1,13 @@
-import { userIntersectionObserver } from '../contexts/useIntersectionObserver';
+import { useIntersectionObserver } from "../contexts/useIntersectionObserver"
 
-const AnimatedSection = ({
-  children,
-  className = '',
-  animation = 'fade-up',
-  delay = 0,
-  ...props
-}) => {
-  const [ref] = userIntersectionObserver();
+const AnimatedSection = ({ children, className = "", animation = "fade-up", delay = 0, ...props }) => {
+  const [ref] = useIntersectionObserver()
 
   return (
-    <section
-      ref={ref}
-      className={`opacity-0 transition-opacity duration-1000 ${className}`}
-      {...props}
-    >
+    <section ref={ref} className={`opacity-0 transition-opacity duration-1000 ${className}`} {...props}>
       {children}
     </section>
-  );
-};
+  )
+}
 
-export default AnimatedSection;
+export default AnimatedSection

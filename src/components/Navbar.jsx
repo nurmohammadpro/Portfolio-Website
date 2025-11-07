@@ -1,8 +1,9 @@
 import NavButton from './NavButton';
 import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import { Braces, EllipsisVertical, X } from 'lucide-react';
+import { EllipsisVertical, X } from 'lucide-react';
 import { useState } from 'react';
+import Logo from '../assets/Logo.png'
 
 const generateId = () => {
   return crypto.randomUUID();
@@ -29,11 +30,11 @@ const Navbar = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
-      <nav className="h-16 flex items-center justify-between relative">
+      <nav className="h-18 flex items-center justify-between relative">
         {/* Logo */}
-        <div>
+        <div className='w-[100px] h-[40px] flex items-center'>
           <Link to="/" className="bg-surface">
-            <Braces strokeWidth={2} className="text-primary w-8 h-8" />
+            <img src={Logo} alt="Logo" />
           </Link>
         </div>
 
@@ -94,7 +95,7 @@ const Navbar = () => {
                 className="flex items-center gap-2"
                 onClick={closeNav}
               >
-                <Braces strokeWidth={2} className="text-primary w-6 h-6" />
+                <img src={Logo} alt="Logo" />
                 <span className="text-primary font-semibold">Portfolio</span>
               </Link>
               <button
