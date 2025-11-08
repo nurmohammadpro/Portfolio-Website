@@ -95,14 +95,15 @@ const Navbar = () => {
                 className="flex items-center gap-2"
                 onClick={closeNav}
               >
-                <img src={Logo} alt="Logo" />
-                <span className="text-primary font-semibold">Portfolio</span>
+                <div className='w-[60px] h-[24px]'>
+                  <img src={Logo} alt="Logo" />
+                </div>
               </Link>
               <button
                 onClick={closeNav}
                 className="p-2 rounded-sm hover:bg-subtle transition-colors duration-200"
               >
-                <X className="w-6 h-6 text-primary" />
+                <X className="w-6 h-6 text-primary cursor-pointer" />
               </button>
             </div>
 

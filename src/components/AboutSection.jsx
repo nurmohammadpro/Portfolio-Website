@@ -36,9 +36,9 @@ const AboutSection = () => {
               <p className="">
                 <Link
                   to="/about"
-                  className="text-center border-primary-color  px-8 py-4 rounded-sm items-center text-primary-color font-semibold hover:text-primary-hover transition-colors text-lg"
+                  className="text-center border-primary-color  px-8 py-4 rounded-sm items-center cursor-pointer text-primary-color font-semibold hover:text-primary-hover transition-colors text-lg"
                 >
-                  Read My Full Journey & Experience →
+                  My Full Journey →
                 </Link>
               </p>
             </AnimatedElement>
